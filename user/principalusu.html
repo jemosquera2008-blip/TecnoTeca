@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de libros - TecnoTeca</title>
+    <link rel="stylesheet" href="stylesearch.css">
+</head>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">TecnoTeca</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menuico.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="contact-us.html">Contactanos</a></li>
+                    <li><a href="../log/login.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1>Catálogo de la Biblioteca</h1>
+            <p class="subtitulo">¡Bienvenido, <span id="username"></span>!<br>
+            Busca tus libros, revistas o artículos disponibles</p>
+        </div>
+    </header>
+
+    <section class="contact-section container" style="margin-top: 10px;">
+        <h2>Buscar material bibliográfico</h2>
+       <form id="search-form">
+            <div class="filter-container">
+                <button type="button" id="filter-btn">
+                    <span>Filtrar</span>
+                </button>
+                <ul id="filter-menu" class="filter-menu">
+                    <li data-category="">Todas las categorías</li>
+                    <li data-category="Novela">Novela</li>
+                    <li data-category="Cuento">Cuento</li>
+                    <li data-category="Filosofía">Filosofía</li>
+                    <li data-category="Terror">Terror</li>
+                    <li data-category="Poesía">Poesía</li>
+                    <li data-category="Ensayo">Ensayo</li>
+                    <li data-category="Aventura">Aventura</li>
+                    <li data-category="Tragedia">Tragedia</li>
+                    <li data-category="Ciencia ficción">Ciencia ficción</li>
+                </ul>
+            </div>
+
+            <input type="text" id="search-input" placeholder="Escribe el título o autor...">
+            <button type="submit">Buscar</button>
+        </form>
+
+
+        <div id="resultados" class="results-container">
+            <p style="margin-top: 10px;">Escribe algo para buscar en la biblioteca...</p>
+        </div>
+
+        <div id="viewer" class="viewer">
+            <button id="close-viewer">✕</button>
+            <iframe id="doc-frame" src="" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../log/js/mostrarUsuario.js"></script>
+    <script src="../log/js/logout.js"></script>
+    <script src="../docs/js/search.js"></script>
+</body>
+</html>

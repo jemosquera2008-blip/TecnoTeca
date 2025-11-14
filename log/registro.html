@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario - TecnoTeca</title>
+    <link rel="stylesheet" href="stylelog.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="wrapper">
+        <form id="registroForm" method="POST">
+            <h1>Crear cuenta</h1>
+
+            <div class="input-box">
+                <input type="text" name="usuario" placeholder="Nombre - Apellido" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="contrasena" placeholder="Contraseña" required>
+                <i class='bx bxs-lock'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
+                <i class='bx bxs-lock'></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox" required> Acepto los términos</label>
+                <a href="login.html">Ya tengo cuenta</a>
+            </div>
+
+            <button type="submit" class="btn">Registrarse</button>
+        </form>
+    </div>
+    <footer class="footer">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../log/js/registro.js"></script>
+</body>
+</html>

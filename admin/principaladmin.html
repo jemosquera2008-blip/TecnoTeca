@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - TecnoTeca</title>
+    <link rel="stylesheet" href="../user/stylesearch.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">TecnoTeca</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="../images/menuico.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="usercontrol.html">Gestión de usuarios</a></li>
+                    <li><a href="agregarLibro.html">Agregar libro</a></li>
+                    <li><a href="../log/login.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1>Panel de Administración</h1>
+            <p class="subtitulo">Bienvenido, <span id="nombreAdmin"></span></p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-section" style="margin-top: 10px;">
+            <h2>Gestión de libros</h2>
+
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Buscar por título o autor...">
+                <button type="submit">Buscar</button>
+
+                <div class="filter">
+                    <button type="button" id="filter-btn">Categorías <span>▼</span></button>
+                    <ul id="filter-menu">
+                        <li data-category="">Todas</li>
+                        <li data-category="Novela">Novela</li>
+                        <li data-category="Cuento">Cuento</li>
+                        <li data-category="Filosofía">Filosofía</li>
+                        <li data-category="Terror">Terror</li>
+                        <li data-category="Ensayo">Ensayo</li>
+                        <li data-category="Poesía">Poesía</li>
+                        <li data-category="Aventura">Aventura</li>
+                        <li data-category="Tragedia">Tragedia</li>
+                        <li data-category="Ciencia ficción">Ciencia ficción</li>
+                    </ul>
+                </div>
+            </form>
+
+            <!-- 📚 Lista de libros -->
+            <div id="tabla-admin" class="results-container"></div>
+
+            <!-- 🧾 Visor PDF -->
+            <div id="viewer" class="viewer">
+                <span id="close-viewer">✖</span>
+                <iframe id="doc-frame" src=""></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/admin.js"></script>
+    <script src="../log/js/logout.js"></script>
+</body>
+</html>

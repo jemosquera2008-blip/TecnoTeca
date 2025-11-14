@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Montserrat", sans-serif;
+}
+.contact-section input,
+.contact-section textarea,
+.contact-section button {
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #333;
+}
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    
+}
+
+.header {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/libreria2.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+
+}
+.menu.container {
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 1%;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+.menu .navbar ul li a {
+    font-size: 15px;
+    padding: 18px;
+    color: white;
+    display: block;
+    font-weight: 700;
+}
+.menu .navbar ul li a:hover{
+    text-decoration: underline;
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+.header-content{
+    text-align: center;
+}
+.header-content h1{
+    background-color: rgba(206, 150, 123, 0.445);
+    font-size: 46px;
+    line-height: 80px;
+    color: #F9FAFC;
+    margin-bottom: px;
+    width: 100vw;
+}
+.header-content p{
+    font-size: 16px;
+    color: #c5c5c5;
+    padding: 0 350px;
+    margin-bottom: 25px;
+}
+.contact-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #e0e0e0;
+    color: #000000;
+}
+
+.contact-section button {
+    background-color: #ce967b;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #b67b5f;
+}
+
+.footer{
+    padding: 30px 0;
+    background-color: rgb(0, 0, 0);
+}

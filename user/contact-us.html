@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecontact.css">
+    <title>Contactanos! - TecnoTeca</title>
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">TecnoTeca</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="../images/menuico.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="principalusu.html">Buscar</a></li> 
+                    <li><a href="../log/login.html" target="_blank">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-section container">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes preguntas o sugerencias? ¡Escríbenos directamente desde aquí!</p>
+
+        <!-- FORMULARIO FUNCIONAL -->
+        <form id="contact-form">
+            <input type="text" name="Nombre" placeholder="Tu nombre" required>
+            <input type="email" name="Correo" placeholder="Tu correo electrónico" required>
+            <textarea name="Mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <!-- Mensaje de estado -->
+        <p id="form-status" style="margin-top:10px; font-weight:600;"></p>
+    </section>
+
+    <footer class="footer">
+    </footer>
+
+    <!-- SCRIPT PARA HACER FUNCIONAL EL FORMULARIO -->
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const nombre = document.querySelector("input[name='Nombre']").value;
+            const correo = document.querySelector("input[name='Correo']").value;
+            const mensaje = document.querySelector("textarea[name='Mensaje']").value;
+            const status = document.getElementById("form-status");
+
+            try {
+                const respuesta = await fetch("http://localhost:3000/contacto", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ nombre, correo, mensaje })
+                });
+
+                const data = await respuesta.json();
+
+                if (data.ok) {
+                    status.style.color = "green";
+                    status.textContent = "Mensaje enviado correctamente 🎉";
+                    e.target.reset();
+                } else {
+                    status.style.color = "red";
+                    status.textContent = "Error al enviar el mensaje ❌";
+                }
+
+            } catch (error) {
+                status.style.color = "red";
+                status.textContent = "No se pudo conectar con el servidor ❌";
+            }
+        });
+    </script>
+    <script src="../log/js/logout.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios - TecnoTeca</title>
+    <link rel="stylesheet" href="../user/stylesearch.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">TecnoTeca</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="../images/menuico.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="principaladmin.html">Volver al panel</a></li>
+                    <li><a href="agregarLibro.html">Agregar libro</a></li>
+                    <li><a href="../log/login.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1>Gestión de Usuarios</h1>
+            <p class="subtitulo">Administrador: <span id="nombreAdmin"></span></p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="users-section" style="margin-top: 30px;">
+            <h2>Lista de usuarios</h2>
+
+            <div id="usuarios-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-usuarios">
+                        <!-- Se llena dinámicamente con JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer"></footer>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Script de gestión -->
+    <script src="js/usercontrol.js"></script>
+
+    <!-- Logout -->
+    <script src="../log/js/logout.js"></script>
+</body>
+<style>
+        /* ==== FOOTER PEGADO AL FONDO DE LA PÁGINA ==== */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* ocupa el espacio restante */
+}
+
+.footer {
+    margin-top: auto; /* empuja el footer al fondo */
+}
+
+        /* Ajustes adicionales propios de esta página */
+
+        .users-section {
+            background: #ffffffd8;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #00000020;
+            width: 100%;
+            min-width: 1200px;   /* <--- puedes ajustar este valor */
+            margin: 30px auto;
+            text-align: left;
+        }
+
+        .users-section h2{
+            text-align: left;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(206, 150, 123);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+
+        .edit-btn, .delete-btn {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            background: rgba(206, 150, 123);
+            color: white;
+        }
+
+        .delete-btn {
+            background: #d9534f;
+            color: white;
+            margin-left: 8px;
+        }
+
+        .no-users {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #666;
+        }
+
+    </style>
+</html>

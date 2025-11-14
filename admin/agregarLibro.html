@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Libro - Administración</title>
+    <link rel="stylesheet" href="../user/stylesearch.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">TecnoTeca</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="../images/menuico.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="principaladmin.html">Volver al panel</a></li>
+                    <li><a href="usercontrol.html">Gestión de usuarios</a></li>
+                    <li><a href="../log/login.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1>Agregar Nuevo Libro</h1>
+            <p class="subtitulo">Administrador: <span id="nombreAdmin"></span></p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-section" style="margin-top: 10px;">
+            <h2>Subir un nuevo libro</h2>
+
+            <form id="form-agregar-libro" enctype="multipart/form-data">
+                <input type="text" name="titulo" placeholder="Título del libro" required>
+                <input type="text" name="autor" placeholder="Autor" required>
+                <label><b>Categoría:</b></label>
+                <select name="categoria" required class="select-categoria">
+                    <option value="">Seleccione una categoría</option>
+                    <option value="Novela">Novela</option>
+                    <option value="Cuento">Cuento</option>
+                    <option value="Filosofía">Filosofía</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Ensayo">Ensayo</option>
+                    <option value="Poesía">Poesía</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Tragedia">Tragedia</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                </select>
+
+
+                <label><b>Archivo PDF:</b></label>
+                <div class="file-input modern">
+                    <label for="archivo" class="file-btn">📄</label>
+                    <span id="file-name">Ningún archivo seleccionado</span>
+                    <input type="file" id="archivo" name="pdf" accept="application/pdf" required>
+                </div>
+
+                <button type="submit">Subir</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/agregarLibro.js"></script>
+    <script src="../log/js/logout.js"></script>
+</body>
+</html>

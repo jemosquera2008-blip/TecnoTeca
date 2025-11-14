@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Montserrat", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    
+}
+.header {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/bg1.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+
+}
+.menu.container {
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 1%;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+.menu .navbar ul li a {
+    font-size: 15px;
+    padding: 18px;
+    color: white;
+    display: block;
+    font-weight: 700;
+}
+.menu .navbar ul li a:hover{
+    text-decoration: underline;
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+.header-content{
+    text-align: center;
+}
+.header-content h1{
+    background-color: rgba(206, 150, 123);
+    font-size: 46px;
+    line-height: 80px;
+    color: #F9FAFC;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 8px;
+}
+.header-content p{
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding: 0 350px;
+    margin-bottom: 25px;
+}
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: rgb(206, 150, 123);
+    color: #F9FAFC;
+    border-radius: 8px;
+}
+.btn-1:hover{
+    background-color: #ebad8d;
+}
+.welcome{
+    padding: 60px 0;
+    background-color: #e0e0e0;
+    position: relative;
+}
+.welcome-content{
+    text-align: center;
+}
+
+.welcome-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+.txt-p{
+    font-size: 16px;
+    color: #414247;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+.welcome-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.welcome-1{
+    padding: 0 25px;
+}
+
+.welcome-1 h3{
+    color: #323337;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer{
+    padding: 30px 0;
+    background-color: rgb(0, 0, 0);
+}
+
+/* ==== Tarjetas centradas y de igual tamaño ==== */
+.help {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 80px 40px;
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Todas las tarjetas tendrán el mismo tamaño */
+.help-content.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 45px 30px;
+    width: 360px;
+    height: 320px; /* Fuerza misma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.help-content.container:hover {
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.help-content.container h4 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.help-content.container p {
+    font-size: 18px;
+    color: #f1f1f1;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* Animación suave */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.help-content.container {
+    animation: fadeInUp 0.7s ease both;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
