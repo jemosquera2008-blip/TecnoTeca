@@ -32,7 +32,7 @@ VirtualLibrary es un sistema de gestión de biblioteca virtual desarrollado como
   - mysql2 (^3.15.3): Cliente MySQL para Node.js.
   - bcryptjs (^3.0.3): Para hashing de contraseñas.
   - cors (^2.8.5): Para habilitar CORS en el servidor.
-  - nodemailer (^7.0.10): Para envío de correos electrónicos (posiblemente para notificaciones o recuperación de contraseña).
+  - nodemailer (^7.0.10): Para envío de correos electrónicos.
 - **Dependencias del proyecto principal (package.json)**:
   - dotenv (^17.2.3): Para gestión de variables de entorno.
   - multer (^2.0.2): Middleware para manejo de archivos multipart/form-data (usado para subir libros o imágenes).
